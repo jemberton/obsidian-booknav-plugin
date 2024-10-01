@@ -6,12 +6,12 @@ This is a plugin to create clickable internal or external links in a note (usual
 
 Add a code block with the language "booknav". Each line of the code block will be parsed as a link. Styling can be applied to each link if "alt" text is provided.
 
-```
-\```booknav
+~~~
+```booknav
   [[Page One | prev]]
   [[Page Three | next]]
-\```
 ```
+~~~
 
 This will generate a full-width element on the note where the codeblock is placed. All links will be parsed and resolved to internal/external links. If the links are internal, the hover action will show the page preview.
 
