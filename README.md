@@ -2,6 +2,8 @@
 
 This is a plugin to create clickable internal or external links in a note (usually at the bottom) to guide a reader along an intended path. There are no dependencies on any other plugins. If the note is viewed in another application, it will be shown as a code block.
 
+![Obsidian BookNav Demo](demo.png)
+
 ## Usage
 
 Add a code block with the language "booknav". Each line of the code block will be parsed as a link. Styling can be applied to each link if "alt" text is provided.
