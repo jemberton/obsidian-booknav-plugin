@@ -17,7 +17,7 @@
 .booknav a {
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 1rem;
     justify-content: center;
     align-items: center;
@@ -25,20 +25,42 @@
 }
 
 .booknav a.prev {
-    align-items: start;
+    justify-content: start;
 }
 
-.booknav a.prev::before {
+.booknav a.prev .icon {
+    margin-right: 1rem;
+}
+
+.booknav a.prev .title {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.booknav a.prev .title::before {
     content: 'Previous';
     color: var(--text-faint);
     font-size: 0.8rem;
 }
 
 .booknav a.next {
-    align-items: end;
+    justify-content: end;
 }
 
-.booknav a.next::before {
+.booknav a.next .icon {
+    margin-left: 1rem;
+}
+
+.booknav a.next .title {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+}
+
+.booknav a.next .title::before {
     content: 'Next';
     color: var(--text-faint);
     font-size: 0.8rem;
