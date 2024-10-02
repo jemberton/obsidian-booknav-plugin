@@ -1,12 +1,3 @@
-/*
-
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
-
 .block-language-booknav {
     border-top: 2px dashed var(--background-modifier-border);
     margin-top: 2rem;
