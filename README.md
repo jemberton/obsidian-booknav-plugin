@@ -10,6 +10,24 @@ I found myself writing documentation for a number of processes. The documentatio
 
 I prefer the "book" style navigation when reading tutorials and found that most of the people I share my notes with did too. I was getting tired of typing raw HTML into the notes. Readers who liked to contribute also couldn't be bothered to learn HTML in the specific way to recreate the navigation links, so I made it easier (I hope).
 
+## Installation
+
+### Community Plugin
+
+> [!warning]
+> This plugin is not *yet* on the Community Plugins list. Once a "production" release is ready, it will be submitted and *hopefully* be accepted!
+
+1. Search for "BookNav" in Obsidian's Community Plugins page
+2. Install & Enable
+
+### Manual Plugin
+
+1. Download a release
+2. Extract into `/path_to_your_vault/.obsidian/plugins/obsidian-booknav-plugin/`
+3. Open Obsidian and goto Community Plugins page
+4. Scroll down to the installed plugins (you may need to refresh)
+5. Enable BookNav plugin by toggling the switch
+
 ## Usage
 
 Add a code block with the language "booknav". Each line of the code block will be parsed as a link. Styling is applied to links marked with "prev", "center", or "next".
