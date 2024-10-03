@@ -4,6 +4,12 @@ This is a plugin to create clickable internal or external links in a note (usual
 
 ![Obsidian BookNav Demo](demo.png)
 
+## Why?
+
+I found myself writing documentation for a number of processes. The documentation won't always be read by someone who understands Markdown, who uses Obsidian, or who will know *where* to find the documents. I have hosted web based documentation on local servers, but found those to be very limiting, costing money to host or license, or dealing with restrictions from IT blocking certain locations from access. It was much easier to share a vault with users (including configurations) and let them just *use* it.
+
+I prefer the "book" style navigation when reading tutorials and found that most of the people I share my notes with did too. I was getting tired of typing raw HTML into the notes. Readers who liked to contribute also couldn't be bothered to learn HTML in the specific way to recreate the navigation links, so I made it easier (I hope).
+
 ## Usage
 
 Add a code block with the language "booknav". Each line of the code block will be parsed as a link. Styling is applied to links marked with "prev", "center", or "next".
