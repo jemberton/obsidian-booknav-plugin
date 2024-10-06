@@ -1,6 +1,6 @@
 {
-	"id": "obsidian-booknav-plugin",
-	"name": "Book Navigation",
+	"id": "booknav",
+	"name": "BookNav",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Adds a codeblock language to parse internal links and render them in a book style navigation.",
