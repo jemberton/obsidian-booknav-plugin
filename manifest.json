@@ -3,7 +3,7 @@
 	"name": "Book Navigation",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Adds a codeblock languag to parse internal links and render them in a book style navigation.",
+	"description": "Adds a codeblock language to parse internal links and render them in a book style navigation.",
 	"author": "Josh Emberton",
 	"authorUrl": "https://github.com/jemberton",
 	"isDesktopOnly": false

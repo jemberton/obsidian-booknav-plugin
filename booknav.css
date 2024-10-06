@@ -1,0 +1,53 @@
+.block-language-booknav {
+    border-top: 2px dashed var(--background-modifier-border);
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+}
+
+.booknav p {
+    background: var(--background-secondary);
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: start;
+    align-items: stretch;
+    border-radius: 0.25rem;
+}
+
+.booknav a {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+.booknav a.prev {
+    align-items: start;
+}
+
+.booknav a.prev::before {
+    content: 'Previous';
+    color: var(--text-faint);
+    font-size: 0.8rem;
+}
+
+.booknav a.next {
+    align-items: end;
+}
+
+.booknav a.next::before {
+    content: 'Next';
+    color: var(--text-faint);
+    font-size: 0.8rem;
+}
+
+.booknav a.center {
+    align-items: center;
+}
+
+.booknav a:hover {
+    background: var(--background-modifier-hover);
+}
