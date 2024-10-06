@@ -14,9 +14,6 @@ I prefer the "book" style navigation when reading tutorials and found that most 
 
 ### Community Plugin
 
-> [!warning]
-> This plugin is not *yet* on the Community Plugins list. Once a "production" release is ready, it will be submitted and *hopefully* be accepted!
-
 1. Search for "BookNav" in Obsidian's Community Plugins page
 2. Install & Enable
 
