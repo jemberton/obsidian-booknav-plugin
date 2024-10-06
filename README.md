@@ -19,8 +19,8 @@ I prefer the "book" style navigation when reading tutorials and found that most 
 
 ### Manual Plugin
 
-1. Download a release
-2. Extract into `/path_to_your_vault/.obsidian/plugins/obsidian-booknav-plugin/`
+1. Download release files (`main.js`, `manifest.json`, `style.css`)
+2. Copy files into `/path_to_your_vault/.obsidian/plugins/booknav/`
 3. Open Obsidian and goto Community Plugins page
 4. Scroll down to the installed plugins (you may need to refresh)
 5. Enable BookNav plugin by toggling the switch
