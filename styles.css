@@ -77,4 +77,5 @@
 
 .booknav a:hover {
     background: var(--background-modifier-hover);
+    border-radius: inherit;
 }
