@@ -66,6 +66,11 @@
     font-size: 0.8rem;
 }
 
+.booknav a.prev .icon svg, .booknav a.next .icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
 .booknav a.center {
     align-items: center;
 }

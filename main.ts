@@ -1,4 +1,4 @@
-import { Plugin, MarkdownRenderChild, MarkdownRenderer } from 'obsidian';
+import { Plugin, MarkdownRenderChild, MarkdownRenderer, setIcon } from 'obsidian';
 
 export default class BookNav extends Plugin {
 	async onload() {
@@ -14,35 +14,55 @@ export default class BookNav extends Plugin {
 			const links = el.findAll('.booknav a');
 
 			for (const link of links) {
-				if (link.innerHTML.endsWith('prev')) {
-					let title = "";
-					if (link.innerHTML === "prev") {
-						title = link.getAttribute('data-href') || 'Previous';
-					} else {
-						title = link.innerHTML.replace(/\|\s*prev/g, '')
+				switch (link.textContent) {
+					case "prev": {
+						const linkText: string = link.getAttr("data-href") || "Previous";
+						link.firstChild?.remove();
+						link.addClass('prev');
+						const icon = link.createSpan({ cls: "icon" });
+						setIcon(icon, "arrow-big-left");
+						link.createSpan({ text: linkText, cls: "title" });
+						break;
 					}
-					// link.innerHTML = title;
-					link.addClass('prev');
-					link.innerHTML = `<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left"><path d="M18 15h-6v4l-7-7 7-7v4h6v6z"/></svg></span><span class="title">${ title }</span>`
-				} else if (link.innerHTML.endsWith('next')) {
-					let title = "";
-					if (link.innerHTML === "next") {
-						title = link.getAttribute('data-href') || 'Next';
-					} else {
-						title = link.innerHTML.replace(/\|\s*next/g, '')
+					case "next": {
+						const linkText: string = link.getAttr("data-href") || "Next";
+						link.firstChild?.remove();
+						link.addClass('next');
+						link.createSpan({ text: linkText, cls: "title" });
+						const icon = link.createSpan({ cls: "icon" });
+						setIcon(icon, "arrow-big-right");
+						break;
 					}
-					// link.innerHTML = title;
-					link.addClass('next');
-					link.innerHTML = `<span class="title">${ title }</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-right"><path d="M6 9h6V5l7 7-7 7v-4H6V9z"/></svg></span>`
-				} else if (link.innerHTML.endsWith('center')) {
-					let title = "";
-					if (link.innerHTML === "center") {
-						title = link.getAttribute('data-href') || '';
-					} else {
-						title = link.innerHTML.replace(/\|\s*center/g, '')
+					case "center": {
+						const linkText: string = link.getAttr("data-href") || "";
+						link.firstChild?.remove();
+						link.addClass('center');
+						link.createSpan({ text: linkText, cls: "title" });
+						break;
 					}
-					link.innerHTML = title;
-					link.addClass('center');
+					default: {
+						if (link.textContent?.endsWith("prev")) {
+							const linkText: string = link.textContent.replace(/\|\s*prev/g, '');
+							link.firstChild?.remove();
+							link.addClass('prev');
+							const icon = link.createSpan({ cls: "icon" });
+							setIcon(icon, "arrow-big-left");
+							link.createSpan({ text: linkText, cls: "title" });
+						} else if (link.textContent?.endsWith('next')) {
+							const linkText: string = link.textContent.replace(/\|\s*next/g, '');
+							link.firstChild?.remove();
+							link.addClass('next');
+							link.createSpan({ text: linkText, cls: "title" });
+							const icon = link.createSpan({ cls: "icon" });
+							setIcon(icon, "arrow-big-right");
+						} else if (link.textContent?.endsWith('center')) {
+							const linkText: string = link.textContent.replace(/\|\s*center/g, '');
+							link.firstChild?.remove();
+							link.addClass('center');
+							link.createSpan({ text: linkText, cls: "title" });
+						}
+						break;
+					}
 				}
 			}
 		});
