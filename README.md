@@ -1,4 +1,4 @@
-# Obsidian BookNav Plugin
+# BookNav Plugin
 
 This is a plugin to create clickable internal or external links in a note (usually at the bottom) to guide a reader along an intended path. There are no dependencies on any other plugins. If the note is viewed in another application, it will be shown as a code block.
 
